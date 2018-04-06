@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Desktop-TestAutomationProject.iml" filepath="$PROJECT_DIR$/.idea/modules/Desktop-TestAutomationProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Desktop-TestAutomationProject_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Desktop-TestAutomationProject_main.iml" group="TestAutomationProject" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Desktop-TestAutomationProject_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Desktop-TestAutomationProject_test.iml" group="TestAutomationProject" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Repository-TestAutomationProject.iml" filepath="$PROJECT_DIR$/.idea/modules/Repository-TestAutomationProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Repository-TestAutomationProject_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Repository-TestAutomationProject_main.iml" group="TestAutomationProject" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Repository-TestAutomationProject_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Repository-TestAutomationProject_test.iml" group="TestAutomationProject" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestAutomationProject.iml" filepath="$PROJECT_DIR$/.idea/modules/TestAutomationProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestAutomationProject_main.iml" filepath="$PROJECT_DIR$/.idea/modules/TestAutomationProject_main.iml" group="TestAutomationProject" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestAutomationProject_test.iml" filepath="$PROJECT_DIR$/.idea/modules/TestAutomationProject_test.iml" group="TestAutomationProject" />
+    </modules>
+  </component>
+</project>
