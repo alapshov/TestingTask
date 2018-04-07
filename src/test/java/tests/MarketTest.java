@@ -6,6 +6,7 @@ package tests;
 import app.Application;
 import cucumber.api.java.ru.Если;
 import cucumber.api.java.ru.Также;
+import org.junit.Assert;
 
 
 public class MarketTest {
@@ -72,22 +73,24 @@ public class MarketTest {
 
     @Также("^проверить, что элементов на странице (\\d+)$")
     public void checkNumberItems(int arg1) {
+       app.checkedCountProduct(arg1);
 
     }
 
     @Также("^запомнить первый элемент в списке$")
     public void rememberFirstItemList() {
-
-
+        app.getFirstProduct();
     }
 
     @Если("^в поисковую строку ввести запомненное значение$")
     public void enterRemeberedValueInSearchLine() {
+        app.searchProduct();
 
     }
 
     @Если("^найти и проверить, что наименование товара соответствует запомненному значению$")
     public void searchAndCheckedNameProductInRemeberedValue() {
+        app.chechedFirstProduct();
 
     }
 }

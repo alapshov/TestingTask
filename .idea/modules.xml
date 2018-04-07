@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Desktop-TestAutomationProject.iml" filepath="$PROJECT_DIR$/.idea/modules/Desktop-TestAutomationProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Desktop-TestAutomationProject_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Desktop-TestAutomationProject_main.iml" group="TestAutomationProject" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Desktop-TestAutomationProject_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Desktop-TestAutomationProject_test.iml" group="TestAutomationProject" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GitRepository-TestAutomationProject.iml" filepath="$PROJECT_DIR$/.idea/modules/GitRepository-TestAutomationProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GitRepository-TestAutomationProject_main.iml" filepath="$PROJECT_DIR$/.idea/modules/GitRepository-TestAutomationProject_main.iml" group="TestAutomationProject" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GitRepository-TestAutomationProject_test.iml" filepath="$PROJECT_DIR$/.idea/modules/GitRepository-TestAutomationProject_test.iml" group="TestAutomationProject" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Repository-TestAutomationProject.iml" filepath="$PROJECT_DIR$/.idea/modules/Repository-TestAutomationProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Repository-TestAutomationProject_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Repository-TestAutomationProject_main.iml" group="TestAutomationProject" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Repository-TestAutomationProject_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Repository-TestAutomationProject_test.iml" group="TestAutomationProject" />

@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="Desktop-TestAutomationProject_main" target="1.8" />
       <module name="Desktop-TestAutomationProject_test" target="1.8" />
+      <module name="GitRepository-TestAutomationProject_main" target="1.8" />
+      <module name="GitRepository-TestAutomationProject_test" target="1.8" />
       <module name="Repository-TestAutomationProject_main" target="1.8" />
       <module name="Repository-TestAutomationProject_test" target="1.8" />
       <module name="TestAutomationProject_main" target="1.8" />

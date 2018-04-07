@@ -5,6 +5,8 @@ package app;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.cs.A;
+import manager.TestManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.HomePage;
@@ -17,8 +19,8 @@ public class Application {
 
     private static WebDriver driver = null;
     private static HomePage homePage;
-    private static MarketPage marketPage;
-    private static ProductPage productPage;
+    private static TestManager testManager;
+    private static String firstProductName;
 
 
     @Before
@@ -29,6 +31,7 @@ public class Application {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://www.yandex.ru");
         homePage = new HomePage(driver);
+        testManager = new TestManager(homePage);
 
     }
 
@@ -99,6 +102,10 @@ public class Application {
         return this;
     }
 
+    /**
+     * Нажать применить
+     * @return
+     */
     public Application pushApply(){
         homePage
                 .getMarketPage()
@@ -108,21 +115,39 @@ public class Application {
     }
 
     /**
-     * Получить количество продуктов
-     *
+     * Проверка количество товаров на странице
+     * @param count
      * @return
      */
-
-    private int getCountProduct() {
-
-        return homePage
-                .getMarketPage()
-                .getProductPage()
-                .setProductList()
-                .getProductList()
-                .size();
+    public Application checkedCountProduct(int count){
+        testManager.checkedCountProduct(count);
+        return this;
     }
 
+    /**
+     * Получить превый продукт
+     * @return
+     */
+    public Application getFirstProduct(){
+        firstProductName = testManager.getFirstProduct();
+        return this;
+    }
+
+    /**
+     * Найти продукт
+     * @return
+     */
+    public Application searchProduct(){
+        homePage
+                .getMarketPage()
+                .getProductPage()
+                .headerSearch(firstProductName);
+        return this;
+    }
+    public Application chechedFirstProduct(){
+        testManager.chekedFirstProductForSearch(firstProductName);
+        return this;
+    }
 
     @After
     public static void quit() {

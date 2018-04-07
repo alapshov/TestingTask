@@ -95,6 +95,7 @@ public class ProductPage {
     public ProductPage headerSearch(String searchText) {
 
         driver.findElement(By.id("header-search")).sendKeys(searchText);
+        driver.findElement(By.cssSelector("span.search2__button")).click();
         return this;
     }
 
