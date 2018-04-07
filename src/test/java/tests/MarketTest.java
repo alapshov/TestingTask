@@ -82,15 +82,25 @@ public class MarketTest {
         app.getFirstProduct();
     }
 
-    @Если("^в поисковую строку ввести запомненное значение$")
+    @Также("^в поисковую строку ввести запомненное значение$")
     public void enterRemeberedValueInSearchLine() {
         app.searchProduct();
 
     }
 
-    @Если("^найти и проверить, что наименование товара соответствует запомненному значению$")
+    @Также("^найти и проверить, что наименование товара соответствует запомненному значению$")
     public void searchAndCheckedNameProductInRemeberedValue() {
         app.chechedFirstProduct();
 
+    }
+
+    @Также("^выбрать соритровку по цене$")
+    public void selectSortPrice(){
+        app.clickSort();
+    }
+
+    @Также("^проверить, что элементы на странице отсортированы верно$")
+    public void chekedSortPrice() throws InterruptedException {
+        app.chekedSortPrice();
     }
 }

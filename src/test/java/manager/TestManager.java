@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import pages.HomePage;
 
+import java.util.List;
+
 public class TestManager {
     private int count;
     private Boolean flag = true;
@@ -51,6 +53,7 @@ public class TestManager {
 
     /**
      * Найти и проверить, что наименование товара соответствует запомненному значению
+     *
      * @param firstProduct
      * @return
      */
@@ -62,5 +65,18 @@ public class TestManager {
 
     }
 
+    /**
+     * Проверяем сортировку цен
+     *
+     * @param listPrice
+     */
+    public void chekedSortlListPrice(List<Integer> listPrice) {
 
+        for (int i = 0; i < listPrice.size()-1; i++){
+            if(listPrice.get(i) > listPrice.get(i+1)){
+                Assert.fail("Сортировка по цене работает не верно");
+            }
+        }
+
+    }
 }

@@ -13,6 +13,7 @@ import pages.HomePage;
 import pages.MarketPage;
 import pages.ProductPage;
 
+import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
 public class Application {
@@ -144,8 +145,36 @@ public class Application {
                 .headerSearch(firstProductName);
         return this;
     }
+
+    /**
+     * Проверка первого продуката
+     * @return
+     */
     public Application chechedFirstProduct(){
         testManager.chekedFirstProductForSearch(firstProductName);
+        return this;
+    }
+
+    public void clickSort(){
+        homePage
+                .getMarketPage()
+                .getProductPage()
+                .cliсkFilterByPrice();
+    }
+
+
+    /**
+     * Проверка сортировки
+     * @return
+     */
+    public Application chekedSortPrice() throws InterruptedException {
+        testManager.chekedSortlListPrice(
+                homePage
+                .getMarketPage()
+                .getProductPage()
+                .listPrice()
+                .getListPrice()
+        );
         return this;
     }
 

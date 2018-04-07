@@ -11,8 +11,5 @@ public class PreHistory {
         new Application().openMarket();
 
     }
-    @То("^открывается страница яндекс маркет$")
-    public void checkedPageMarket() {
 
-    }
 }

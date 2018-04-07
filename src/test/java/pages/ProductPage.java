@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 public class ProductPage {
@@ -16,9 +17,25 @@ public class ProductPage {
 
     private WebDriver driver;
     private List<WebElement> productList;
+    private List<WebElement> priceElements;
+    private List<Integer> listPrice = new ArrayList<Integer>();
 
+    /**
+     * Получаем список продуктов
+     *
+     * @return
+     */
     public List<WebElement> getProductList() {
         return productList;
+    }
+
+    /**
+     * Получаем список цен
+     *
+     * @return
+     */
+    public List<Integer> getListPrice() {
+        return listPrice;
     }
 
 
@@ -92,6 +109,13 @@ public class ProductPage {
         return this;
     }
 
+    /**
+     * Поиск
+     *
+     * @param searchText
+     * @return
+     */
+
     public ProductPage headerSearch(String searchText) {
 
         driver.findElement(By.id("header-search")).sendKeys(searchText);
@@ -99,5 +123,31 @@ public class ProductPage {
         return this;
     }
 
+    /**
+     * Сортировка по цене
+     *
+     * @return
+     */
+    public ProductPage cliсkFilterByPrice() {
+        driver.findElement(By.linkText("по цене")).click();
+        return this;
+    }
+
+    /**
+     * Считывает цены в список
+     *
+     * @return
+     */
+    public ProductPage listPrice() throws InterruptedException {
+        Thread.sleep(5000);
+        priceElements = driver.findElements(By.cssSelector("div.n-snippet-cell2__main-price div.price"));
+        for (WebElement priceElement : priceElements) {
+           String s = priceElement.getAttribute("textContent")
+                    .replace("\u20BD", "")
+                    .replaceAll(" ","");
+           listPrice.add(Integer.parseInt(s.substring(0,s.length()-1)));
+        }
+        return this;
+    }
 
 }
